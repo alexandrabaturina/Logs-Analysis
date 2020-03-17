@@ -10,3 +10,13 @@ To use LogsAnalysis, the following software and data are required:
   - *Vagrant* – software to configure virtual machine. Download the version for your operating system from [here](https://www.vagrantup.com/downloads.html)
   - The virtual machine configuration file. Download and unzip [this file](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip)
   - The *newsdata.sql* file. Download from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) and unzip
+
+### Starting the Virtual Machine
+Change to the directory containg virtual machine files. Find the **vagrant** directory and change to it. Inside the **vagrant** directory, run the following command.
+```sh
+$ vagrant up
+```
+Once **vagrant up** is finished running, log in to the virtual machine using the following command.
+```sh
+$ vagrant ssh
+```
