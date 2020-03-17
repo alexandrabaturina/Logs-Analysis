@@ -30,3 +30,13 @@ print('The most popular authors:')
 for r in result:
     print(r[0] + ' - ' + str(r[1]) + ' views')
 print('\n')
+
+try:
+    cursor.execute("""select to_char(total.time, 'FMMonth DD, YYYY') as time,
+        (cast (count_errors as decimal) / count_requests) * 100
+        from total join errors
+        on date(total.time) = date(errors.time)
+        where (count_errors * 100 / count_requests) > 1""")
+except psycopg2.Error, e:
+    pass
+result = cursor.fetchall()
