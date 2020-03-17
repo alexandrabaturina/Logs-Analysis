@@ -38,4 +38,8 @@ $ create view total as
 $ select date(time) as time, count(*) as count_requests
 $ from log
 $ group by date(time);
+## Running
+To run LogsAnalysis from the terminal, use the following command.
+```sh
+$  python LogsAnalysis.py
 ```
