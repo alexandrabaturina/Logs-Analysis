@@ -16,3 +16,13 @@ print('Three most popular articles:')
 for r in result:
     print(r[0] + ' - ' + str(r[1]) + ' views')
 print('\n')
+
+try:
+    cursor.execute("""select authors.name, count(*) as views
+    from log, authors, articles
+    where log.path like concat('%', articles.slug) and
+    authors.id=articles.author
+    group by authors.name order by views desc""")
+except psycopg2.Error, e:
+    pass
+result = cursor.fetchall()
