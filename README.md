@@ -24,3 +24,18 @@ $ vagrant ssh
 Place the unziped *newsdata.sql* file to the **vagrant** directory. To load the data, from the **vagrant** directory, run the following command.
 ```sh
 $ psql -d news -f newsdata.sql
+### Creating Views
+In the terminal, type the following commands to create __errors__ and __total__ views in the database.
+```sh
+$ create view errors as
+$ select date(time) as time, count(*) as count_errors
+$ from log
+$ where status != '200 OK'
+$ group by date(time);
+```
+```sh
+$ create view total as
+$ select date(time) as time, count(*) as count_requests
+$ from log
+$ group by date(time);
+```
