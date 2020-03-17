@@ -26,3 +26,7 @@ try:
 except psycopg2.Error, e:
     pass
 result = cursor.fetchall()
+print('The most popular authors:')
+for r in result:
+    print(r[0] + ' - ' + str(r[1]) + ' views')
+print('\n')
