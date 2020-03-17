@@ -20,3 +20,7 @@ Once **vagrant up** is finished running, log in to the virtual machine using the
 ```sh
 $ vagrant ssh
 ```
+### Loading the Data to the Database
+Place the unziped *newsdata.sql* file to the **vagrant** directory. To load the data, from the **vagrant** directory, run the following command.
+```sh
+$ psql -d news -f newsdata.sql
