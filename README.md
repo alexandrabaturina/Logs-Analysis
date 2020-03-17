@@ -3,3 +3,10 @@ LogsAnalysis is a Python-based reporting tool to analyze data. LogsAnalysis prin
   - Three most popular articles of all time
   - The most popular article authors of all time
   - Days when more than 1% of requests lead to errors
+## Getting Started
+### Prerequisites
+To use LogsAnalysis, the following software and data are required:
+  - *VirtualBox* – software to run the virtual machine. Download from [here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
+  - *Vagrant* – software to configure virtual machine. Download the version for your operating system from [here](https://www.vagrantup.com/downloads.html)
+  - The virtual machine configuration file. Download and unzip [this file](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip)
+  - The *newsdata.sql* file. Download from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) and unzip
