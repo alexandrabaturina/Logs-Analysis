@@ -43,3 +43,5 @@ To run LogsAnalysis from the terminal, use the following command.
 ```sh
 $  python LogsAnalysis.py
 ```
+## Authors
+  + Alexandra Baturina
