@@ -43,4 +43,3 @@ result = cursor.fetchall()
 print('Days when more than 1% of requests lead to errors:')
 for r in result:
     print(r[0] + ' - ' + str(round(r[1], 2)) + '%')
-    
