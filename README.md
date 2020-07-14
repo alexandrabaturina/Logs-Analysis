@@ -32,23 +32,50 @@ $ psql -d news -f newsdata.sql
 ```
 ### Creating Views
 In the terminal, type the following commands to create __errors__ and __total__ views in the database.
-```sh
+```
 $ create view errors as
 $ select date(time) as time, count(*) as count_errors
 $ from log
 $ where status != '200 OK'
 $ group by date(time);
 ```
-```sh
+```
 $ create view total as
 $ select date(time) as time, count(*) as count_requests
 $ from log
 $ group by date(time);
 ```
 ## Running
-To run LogsAnalysis from the terminal, use the following command.
+To run the script locally,
+1. Clone this repo.
+2. ```cd``` into project directory.
+3. Add execution permission to **logs_analysis.py**.
 ```sh
-$  python LogsAnalysis.py
+$ chmod +x logs_analysis.py
 ```
-## Authors
-  + Alexandra Baturina
+4. Run the script using the command below.
+```sh
+$  python logs_analysis.py
+```
+
+The results of the **logs_analysis.py** script execution are shown below.
+```sh
+vagrant@vagrant:/vagrant$ python LogsAnalysis.py
+Three most popular articles:
+Candidate is jerk, alleges rival - 338647 views
+Bears love berries, alleges bear - 253801 views
+Bad things gone, say good people - 170098 views
+
+
+The most popular authors:
+Ursula La Multa - 507594 views
+Rudolf von Treppenwitz - 423457 views
+Anonymous Contributor - 170098 views
+Markoff Chaney - 84557 views
+
+
+Days when more than 1% of requests lead to errors:
+July 17, 2016 - 2.26%
+```
+## Author
+Alexandra Baturina
