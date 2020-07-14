@@ -1,5 +1,10 @@
-# LogsAnalysis
-LogsAnalysis is a Python-based reporting tool to analyze data. LogsAnalysis prints out the following information from the **news** database:
+# Logs Analysis
+## Overview
+The **logs_analysis.py** is reporting tool to analyze the reader's activity on newspaper site. The database to analyze contains newspaper articles as well as the web server log for the site. The log has a database row for each time a reader loaded a web page.
+
+The **log_analysis.py** script is written as first assignment of [Full Stack Web Developer Nanodegree Program](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044) provided by Udacity.
+## Features
+The **logs_analysis.py** script prints out the following information from the **news** database:
   - Three most popular articles of all time
   - The most popular article authors of all time
   - Days when more than 1% of requests lead to errors
