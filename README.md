@@ -60,7 +60,7 @@ $  python logs_analysis.py
 
 The results of the **logs_analysis.py** script execution are shown below.
 ```sh
-vagrant@vagrant:/vagrant$ python LogsAnalysis.py
+vagrant@vagrant:/vagrant$ python logs_analysis.py
 Three most popular articles:
 Candidate is jerk, alleges rival - 338647 views
 Bears love berries, alleges bear - 253801 views
